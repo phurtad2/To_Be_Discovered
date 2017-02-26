@@ -18,7 +18,7 @@ class StdOutListener(StreamListener):
         bool = True
         try:
             print(tweet['user']['name'])
-            url = tweet['user']['profile_image_url'];
+            url = tweet['user']['profile_image_url'].replace('_normal', '_larger');
             print(tweet['text'])
         except KeyError:
             return bool
